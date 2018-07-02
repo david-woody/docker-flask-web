@@ -1,6 +1,7 @@
 FROM python:3.6-alpine 
 COPY start.sh /run/
 COPY requirements.txt /code/
+
 WORKDIR /code
 RUN apk add --no-cache bash \
     && apk update && apk add postgresql-dev gcc python3-dev musl-dev \
