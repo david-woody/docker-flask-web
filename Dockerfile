@@ -7,7 +7,7 @@ RUN apk add --no-cache bash \
     && pip install --upgrade pip \
     &&  pip install gunicorn
 ENV PYTHONDONTWRITEBYTECODE=1
-ENV FLASK_CONFIG= product
+ENV FLASK_CONFIG=product
 RUN pip install -r requirements.txt
 CMD ["../run/start.sh"]
 EXPOSE 5000
