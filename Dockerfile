@@ -3,7 +3,7 @@ COPY start.sh /run/
 COPY requirements.txt /code/
 WORKDIR /code
 RUN apk add --no-cache bash \
-    && apk update && apk add postgresql-dev gcc python3-dev musl-dev \
+    && apk update && apk add postgresql-dev gcc python3-dev musl-dev libpq-dev\
     && pip install --upgrade pip \
     &&  pip install gunicorn
 ENV PYTHONDONTWRITEBYTECODE=1
