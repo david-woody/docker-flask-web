@@ -5,7 +5,7 @@ WORKDIR /code
 RUN apk add --no-cache bash \
     && apk update && apk add postgresql-dev gcc python3-dev musl-dev \
     && pip install --upgrade pip \
-    &&  pip install gunicorn 
+    &&  pip install gunicorn \ 
     &&  pip install psycopg2-binary
 ENV PYTHONDONTWRITEBYTECODE=1
 RUN pip install -r requirements.txt
